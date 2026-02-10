@@ -1,6 +1,6 @@
 # Batalha de Dragões 🐲
 
-Um jogo de luta onde dois dragões batalham entre si!
+Um jogo de luta onde dragões batalham entre si!
 
 ## Como Jogar
 
