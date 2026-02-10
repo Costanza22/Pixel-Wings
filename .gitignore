@@ -1,0 +1,24 @@
+# Arquivos Java compilados (não são necessários para o jogo web)
+*.class
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+
+
+

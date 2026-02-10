@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelWings</title>
+    <link rel="icon" type="image/png" href="assets/sprites/image.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a2e;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        #gameContainer {
+            position: relative;
+            border: 3px solid #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        #gameCanvas {
+            display: block;
+            background: #1e1e3e;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
