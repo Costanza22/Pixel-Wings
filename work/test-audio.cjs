@@ -1,0 +1,7 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+function param(){return {value:0,setValueAtTime(v){this.value=v;},exponentialRampToValueAtTime(v){this.value=v;},cancelScheduledValues(){},setTargetAtTime(v){this.value=v;}};}
+let starts=0,stops=0;
+class AudioContext{constructor(){this.currentTime=0;this.destination={};}resume(){return Promise.resolve();}createGain(){return {gain:param(),connect(){},disconnect(){}};}createDynamicsCompressor(){return {threshold:param(),ratio:param(),connect(){}};}createOscillator(){return {frequency:param(),connect(){},disconnect(){},start(){starts++;},stop(){stops++;}};}}
+const sandbox={window:{AudioContext},document:{querySelector(){return null;}},setInterval,clearInterval};
+vm.runInNewContext(fs.readFileSync('outputs/duelo-dos-dragoes/audio.js','utf8'),sandbox);
+(async()=>{const s=new sandbox.window.DragonSoundtrack();assert.equal(starts,0);await s.start();assert.ok(starts>0);assert.ok(s.nodes.size>0);s.setEnabled(false);assert.equal(s.master.gain.value,0);s.setVolume(2);assert.equal(s.volume,1);s.setEnabled(true);assert.equal(s.master.gain.value,.5);s.pause();assert.equal(s.nodes.size,0);assert.equal(s.playing,false);assert.ok(stops>0);const a=s.start();s.pause();await a;assert.equal(s.playing,false);assert.equal(s.nodes.size,0);console.log('Áudio: início por ação, notas agendadas, mute, volume limitado, pausa e cancelamento de retomada: OK');})().catch(e=>{console.error(e);process.exit(1);});
