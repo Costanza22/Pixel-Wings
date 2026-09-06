@@ -16,6 +16,43 @@ A versão atual é um duelo local em JavaScript puro com Canvas, sem dependênci
 - Tradução para inglês e português
 - Arte local em sprites e imagens embutidas
 
+## Assets dos dragões
+
+Os dragões foram desenhados como personagens de arena com identidade visual bem marcada: vermelho para o protagonista e azul para o adversário, com paleta quente e fria para diferenciar ataques e personalidade.
+
+### Dragão vermelho (Ignis)
+
+![Dragão vermelho principal](outputs/duelo-dos-dragoes/dragon.png)
+
+- Arquivo principal: `outputs/duelo-dos-dragoes/dragon.png`
+- Folha de sprites: `outputs/duelo-dos-dragoes/dragon-sprites.png`
+- Uso no jogo: personagem jogável, poses de ataque, defesa, caminhada e derrota
+
+### Dragão azul (Azur)
+
+![Dragão azul adversário](outputs/duelo-dos-dragoes/dragon-blue-sprites.png)
+
+- Arquivo principal: `outputs/duelo-dos-dragoes/dragon-blue-sprites.png`
+- Uso no jogo: adversário controlado pela IA, com paleta em azul/ciano e detalhes dourados
+
+### Arena e cenário
+
+![Arena medieval](outputs/duelo-dos-dragoes/arena.png)
+
+- Cenário principal da luta
+- Estilo medieval com contraste de cores e iluminação dramática
+- A composição foi pensada para deixar o foco no combate e na leitura visual das ações
+
+## Design e identidade visual
+
+O projeto foi pensado com uma linguagem visual limpa, legível e clássica de arena. A identidade tem três pilares:
+
+1. Contraste de cores: vermelho e azul como marcas visuais dos lados da disputa
+2. Leitura rápida do combate: barras de vida, energia, estado de defesa e impacto visual dos ataques
+3. Estética medieval com foco em ação: cenário escuro, detalhes dourados e formas agressivas, sem poluição visual
+
+A proposta do design é permitir que o jogador identifique imediatamente quem está atacando, quem está defendendo e quando a energia está se esgotando.
+
 ## Como executar
 
 1. Baixe ou clone este repositório.
